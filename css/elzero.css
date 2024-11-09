@@ -1398,6 +1398,166 @@ ul {
 
 /* End Events */
 
+/* Start Pricing */
+
+.pricing {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  background-color: var(--section-background,#ececec);
+  position: relative;
+}
+
+.pricing .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+  gap: 30px;
+}
+
+.pricing .box {
+  position: relative;
+  background-color: white;
+  text-align: center;
+  z-index: 1;
+  box-shadow: 0px 12px 20px 0px rgb(0 0 0 /13%), 0px 2px 4px 0px rgb(0 0 0 /12%);
+  transition: var(--main-transition, 0.3s);
+  -webkit-transition: var(--main-transition, 0.3s);
+  -moz-transition: var(--main-transition, 0.3s);
+  -ms-transition: var(--main-transition, 0.3s);
+  -o-transition: var(--main-transition, 0.3s);
+}
+
+.pricing .box::before ,
+.pricing .box::after {
+  content: "";
+  width: 0;
+  height: 50%;
+  background-color: #f6f6f6;
+  position: absolute;
+  z-index: -1;
+  transition: var(--main-transition, 0.3s);
+  -webkit-transition: var(--main-transition, 0.3s);
+  -moz-transition: var(--main-transition, 0.3s);
+  -ms-transition: var(--main-transition, 0.3s);
+  -o-transition: var(--main-transition, 0.3s);
+}
+
+.pricing .box::before {
+  left: 0;
+  top : 0;
+}
+.pricing .box::after {
+  right: 0;
+  bottom: 0;
+}
+
+.pricing .box:hover::before,
+.pricing .box:hover::after {
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .pricing .box.popular {
+    top: -20px;
+  }
+}
+
+.pricing .box.popular .label{
+  position: absolute;
+  background-color: var(--main-color,#2196F3);
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  right: 20px;
+  width: 40px;
+  padding: 10px 10px 50px 10px;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+}
+
+.pricing .box.popular .label::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-color: transparent transparent white;
+  border-width: 20px;
+}
+
+.pricing .box .title {
+  font-weight: bold;
+  margin: 30px 0;
+  font-size: 25px;
+  letter-spacing: -1px;
+}
+
+.pricing .box img {
+  width: 80px;
+  margin-bottom: 30px;
+}
+
+.pricing .box .price {
+  margin-bottom: 20px;
+}
+
+.pricing .box .amount{
+  display: block;
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--main-color, #2196F3);
+}
+
+.pricing .box .time {
+  color: #777;
+}
+
+.pricing .box ul {
+  text-align: left;
+}
+
+.pricing .box ul li{
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+
+.pricing .box ul li::before{
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  margin-right: 10px;
+  font-weight: 900;
+  color: var(--main-color,#2196F3);
+}
+
+.pricing .box a {
+  display: block;
+  width: fit-content;
+  border: 2px solid var(--main-color, #2196F3);
+  color:  var(--main-color);
+  margin: 30px auto 40px;
+  padding: 15px 20px;
+  font-weight: bold;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  transition: var(--main-transition, 0.3s);
+  -webkit-transition: var(--main-transition, 0.3s);
+  -moz-transition: var(--main-transition, 0.3s);
+  -ms-transition: var(--main-transition, 0.3s);
+  -o-transition: var(--main-transition, 0.3s);
+}
+
+.pricing .box a:hover {
+  color: white;
+  background-color:  var(--main--color-alt,#1787e0);
+  border-color: var(--main--color-alt,#1787e0);
+}
+
+/* End Pricing */
+
 /* Start Animation */
 
 @keyframes up-and-down {
